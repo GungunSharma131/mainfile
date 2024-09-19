@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="WelcomeMessage"></h2>
+        <h2 id="WelcomeMessage1"></h2>
+        <h2 id="WelcomeMessage2"></h2>
+        <h2 id="WelcomeMessage3"></h2>
+        <h2 id="WelcomeMessage4"></h2>
+
+    </div>
+
+    </div>
+    
+
+    </div>
+<script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const firstname= localStorage.getItem('firstname');
+            const lastname= localStorage.getItem('lastname');
+            const email = localStorage.getItem('email');
+            const password = localStorage.getItem('password');
+            const message = localStorage.getItem('message');
+            if (firstname){
+                document.getElementById('WelcomeMessage').innerText = `
+                firstname, ${firstname}!`;
+                document.getElementById('WelcomeMessage1').innerText = `lastname, ${lastname}!`;
+                document.getElementById('WelcomeMessage2').innerText = `E-mail -  ${email}!`;
+                document.getElementById('WelcomeMessage3').innerText = `password -  ${password}!`;
+                document.getElementById('WelcomeMessage4').innerText = `message -  ${message}!`;
+
+            } else {
+                document.getElementById('WelcomeMessage').innerText = 'Welcome!';
+                
+                
+            }
+        });
+    
+</script>
+    
+</body>
+</html>

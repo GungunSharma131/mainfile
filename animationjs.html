@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            .animation-section{
+                height:200px;
+                width:200px;
+                background:blue;
+                animation-name:card;
+                animation-duration:10s;
+                animation-iteration-count:infinite;
+                animation-timing-function:ease-in-out;
+                
+	}
+    @keyframes card{
+        0%{
+            background-color: aqua;
+            margin: 0;
+        }
+        20%{
+            background-color: blueviolet;
+            margin-top: 0;
+            margin-left: 50%;
+        }
+        40%{
+            background-color: rgb(226, 43, 110);
+            margin-top: 30%;
+            margin-left: 50%;
+        }
+        60%{
+            background-color: rgb(226, 43, 43);
+            margin-left: 0;
+            margin-top: 30%;
+        }
+    }
+        </style>
+    </head>
+    <body>
+        <div class="animation-section">
+            <div class="animation">
+                hello world
+            </div>
+        </div>
+    </body>
+</html>

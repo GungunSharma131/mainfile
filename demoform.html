@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Form</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f0f0f0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container{
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+
+            }
+            h2{
+                margin-bottom: 20px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+
+            }
+            label{
+                margin-bottom: 5px;
+
+            }
+            input{
+                margin-bottom: 10px;
+                padding: 8px;
+                border: 1px solid red;
+                border-radius: 3px;
+            }
+
+            button{
+                padding: 10px;
+                border: none;
+                background-color: aqua;
+                color:black;
+                cursor: pointer;
+                border-radius: 3px;
+
+            }
+            button:hover{
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h2>Signup Form</h2>
+            <form id="signupForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <script>
+            document.getElementById('signupForm').addEventListener('submit',function(event){
+                event.preventDefault();
+                
+                const username = document.getElementById('username').value;
+                localStorage.setItem('username',username);
+
+                const email = document.getElementById('email').value;
+                localStorage.setItem('email',email);
+
+                
+
+                window.location.href = 'welcome.html';
+
+            });
+        
+        </script>
+
+
+<div class="card card-item  card-box  text-center" style="width: 18rem;">
+    <img src="assets/image/code.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Gungun Sharma</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">\
+        <div class="row g-4">
+            <div class="col-xxl-4">
+                
+            </div>
+        </div>
+    </div>
+  </div>
+ 
+    </body>
+</html>

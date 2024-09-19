@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valid Form</title>
+        <style>
+            
+            .form-section{
+                height: 500px;
+                width: 100%;
+                background-color: cornflowerblue;
+                padding: 10px;
+            }
+            .heading-sec{
+                text-align: center;
+                font-weight: 100;
+                font-size: 40px;
+                margin-top: 2%;
+                text-decoration: underline;
+            }
+
+            .main-form{
+                width: 100%;
+                display: flex;
+                justify-content:space-around ;
+            }
+            .first{
+                font-size: 25px;
+                font-weight: 100;
+            }
+            .last{
+                height: 30px;
+                width: 500px;
+               
+            }
+            .first1{
+                font-size: 25px;
+                font-weight: 100;
+                margin-left: 60px;
+            }
+            .last1{
+                height: 30px;
+                width: 90%;
+                border-radius: 20xp;
+                margin-left: 60px;
+            }
+            .last2{
+                height: 100px;
+                width: 90%;
+                border-radius: 20xp;
+                margin-left: 60px;
+            }
+            .btn1{
+                height: 40px;
+                width:70px;
+                background:blue;
+                margin-top: 20px;
+                margin-left: 60px;
+                color: aliceblue;
+                border-radius: 20px;
+
+            }
+            .main-button{
+                display: flex;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="form-section">
+           <h1 class="heading-sec">Contact Form</h1>
+            <form name="myForm" onsubmit="formValidity()">
+                <div class="main-form">
+                <div class="form-sec">
+                    <label class="first">FirstName:</label><br>
+                    <input class="last" type="text" name="firstname" placeholder="Enter Your Name">
+                </div>
+                <div class="form-sec">
+                    <label class="first">LastName:</label><br>
+                    <input class="last" type="text" name="lastname" placeholder="Enter Your Name">
+                </div>
+            </div>
+            <div class="form-sec">
+                <label class="first1">Eamil:</label><br>
+                <input class="last1" type="email" name="email">
+            </div>
+            <div class="form-sec">
+                <label class="first1">Massage*</label>
+                <textarea class="last2" rows="10" cols="10" ></textarea><br>
+            </div>
+            <div class="main-button">
+                <div class="btn">
+                    <button type="submit" class="btn1">Submit</button>
+                </div>
+                <div class="btn">
+                    <button type="reset" class="btn1">Reset</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </body>
+    <script>
+        function formValidity(){
+            let a = document.forms["myForm"]["firstname"].value;
+            let b = document.forms["myForm"]["lastname"].value;
+            let c = document.forms["myForm"]["email"].value;
+            if( a=="" || b=="" ||c=="" ||d==""){
+                alert("please fill all fildes");
+
+                return false;
+            }
+    
+            
+           
+
+        }
+    </script>
+
+</html>

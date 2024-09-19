@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+            To-Do List 
+        </title>
+        <style>
+            .demo-box{
+                height: 500px;
+                width: 100%;
+            }
+            .box{
+                height: 500px;
+                width: 300px;
+                background-color: black;
+                margin: auto;
+            }
+            .head{
+                text-align: center;
+                margin-top:20px;
+                color: cadetblue;
+                padding: 40px;
+            }
+            #demo{
+                height: 40px;
+                width: 250px;
+                border: none;
+                border-radius: 20px;
+                margin-left: 20px;
+                margin-top:-40px ;
+            }
+            #btn{
+                 height: 40px;
+                 width: 90px;
+                 background-color: rgb(120, 9, 224);
+                 color:white;
+                 margin-left: 32%;
+                 border-radius: 10px;
+                 margin-top: 5px;
+                 
+            }
+            .task{
+                color: white;
+            }
+            
+          
+
+        </style>
+    </head>
+        <body>
+            <div class="demo-box">
+                
+            <div class="box">
+                <h1 class="head">TO-DO LIST</h1>
+            <input type="text" id="demo">
+            <button id="btn">Add Task</button>
+            <ul id="demo2"></ul>
+        </div>
+        </div>
+            <script>
+                document.getElementById('btn').onclick = function(){
+                    let task = document.getElementById('demo').value;
+                    if(task){
+                        let task2 = document.createElement('li');
+                        task2.className = 'task';
+                        task2.innerHTML = `${task} <span class="remove">&#10060;</span>`;
+
+                         task2.querySelector('.remove').onclick = function(){
+                             this.parentElement.remove();
+                         };
+                        document.getElementById('demo2').appendChild(task2);
+                        document.getElementById('demo').value = '';
+
+
+                    }
+                }
+            </script>
+            
+        </body>
+</html>

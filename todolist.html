@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>TO-DO List</title>
+        <link rel="stylesheet" href="list.css">
+    </head>
+    <body>
+        <div class="list-section">
+            <div class="list-box">
+            <h1 class="head">TO-Do List</h1>
+        <input type="text" id="demo">
+        <button id="btn">ADD TASK</button>
+        <ul id="demo2"></ul>
+    </div>
+    </div>
+        <script>
+            document.getElementById('btn').onclick = function(){
+                let task = document.getElementById('demo').value.trim();
+                if(task){
+                    let task2 = document.createElement('li');
+                     task2.className='task';
+                     task2.innerHTML = `${task} <span class="remove">&#10060;</span>`;
+
+                     task2.querySelector('.remove').onclick =  function(){
+                        this.parentElement.remove();
+                     };
+             
+                document.getElementById('demo2').appendChild(task2);
+                document.getElementById('demo').value = '';
+
+            };
+            
+        
+        }
+
+        </script>
+    </body>
+</html>

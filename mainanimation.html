@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AnimationJs</title>
+        <style>
+            .container{
+                width: 500px;
+                height: 500px;
+            }
+            #box{
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                background-color:olive ;
+            }
+        </style>
+    </head>
+       <body>
+        <button id="btn" onclick="myfunction()">Login</button>
+   <div class="container">
+    <div id="box">
+
+    </div>
+   </div>
+      
+       
+        <script>
+            function myfunction(){
+                let id = null;
+                const card = document.getElementById("box");
+                let pos=0;
+                clearInterval(id);
+                id = setInterval(frame, 5);
+                function frame(){
+                    if(pos == 350){
+                        clearInterval(id);
+                        
+                    }
+                    else{
+                        pos++;
+                        card.style.margin = "100px";
+                        
+                    }
+                }
+
+            }
+        </script>
+       </body>
+
+</html>

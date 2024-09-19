@@ -1,0 +1,43 @@
+.list-section{
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    
+    
+}
+.list-box{
+    height: 300px;
+    width: 400px;
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin: auto;
+    padding: 5%;
+    margin-top: 10%;
+}
+.head{
+    text-align: center;
+}
+#demo2{
+    list-style-type: none;
+    padding: 0;
+}
+#demo{
+    height:40px;
+    width: 250px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+}
+
+#btn{
+    font-size: 18px;
+    background-color: rgb(69, 125, 4);
+    color: white;
+}
+#btn:hover{
+    background-color: black;
+}
+.task{
+    background-color: cadetblue;
+    color: white;
+    text-align: left;
+}
